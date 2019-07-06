@@ -8,7 +8,7 @@ const cn = {
 };
 
 if(process.env.DATABASE_URL){
-    const cn = {
+    cn = {
         connectionString: process.env.DATABASE_URL,
         ssl: true
     };
