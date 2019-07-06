@@ -1,5 +1,5 @@
 const pgp = require('pg-promise')();
-const cn = {
+let cn = {
     host: 'localhost',
     port: 5432,
     database: 'auth',
