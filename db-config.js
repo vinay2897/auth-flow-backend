@@ -5,8 +5,14 @@ const cn = {
     database: 'auth',
     user: 'auth_admin',
     password: '1234',
-
 };
+
+if(process.env.DATABASE_URL){
+    const cn = {
+        connectionString: process.env.DATABASE_URL,
+        ssl: true
+    };
+}
 const db = pgp(cn);
 
 module.exports = db;

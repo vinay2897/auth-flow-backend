@@ -1,0 +1,2 @@
+create table users(uid varchar(255) primary key,email varchar(255),password varchar(255),firstname varchar(255),lastname varchar(255));
+create table auth(uid varchar(255),at varchar(255),rt varchar(255),at_time timestamptz default now(),rt_time timestamptz default now(), foreign key(uid) references users(uid));
